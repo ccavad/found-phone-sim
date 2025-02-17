@@ -1,20 +1,15 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+import { StackNavigation } from "./navigation/StackNavigation";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { CustomStatusbar } from "./components/layout/Statusbar";
+import CustomBottomNavigation from "./components/layout/BottomNavigation";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView style={{ flex: 1 }}>
+      <StatusBar hidden={true} />
+      <CustomStatusbar />
+      <StackNavigation />
+    </SafeAreaView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
