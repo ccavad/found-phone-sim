@@ -1,13 +1,17 @@
 import React, { useState } from "react";
 import { View, StyleSheet, TouchableOpacity, Modal, Text } from "react-native";
-import { ArrowLeft, ChevronLeft, Home, Settings } from "lucide-react-native"; // Import the Lucide icons
+import { ChevronLeft, Home, Settings } from "lucide-react-native";
 import { useNavigation } from "@react-navigation/native";
+import theme from "../../theme/theme";
 
 const CustomBottomNavigation = () => {
   const navigation = useNavigation();
   const [modalVisible, setModalVisible] = useState(false);
 
   const handleBack = () => {
+    // console.log("navigation", navigation);
+    console.log("naviga", navigation?.getCurrentRoute()?.name);
+    // todo it shouldnt go back lock screen
     if (navigation.canGoBack()) {
       navigation.goBack();
     }
@@ -72,9 +76,9 @@ const styles = StyleSheet.create({
     left: 0,
     right: 0,
     height: 60,
-    backgroundColor: "rgba(0, 0, 0, 0.5)", // Transparent background
-    borderTopWidth: 1,
-    borderTopColor: "#fff",
+    backgroundColor: theme.colors.darkOverlay, // Transparent background
+    // borderTopWidth: 1,
+    // borderTopColor: "#fff",
     zIndex: 1,
   },
   button: {
@@ -87,13 +91,28 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "rgba(0, 0, 0, 0.5)",
+    backgroundColor: theme.colors.darkOverlay,
   },
   modalContent: {
-    backgroundColor: "white",
+    backgroundColor: "#4A90E2", // Slightly lighter than pure black
+    borderRadius: 12,
+    borderWidth: 1,
+    borderColor: "#3A3A3C", // Subtle border for depth
     padding: 20,
-    borderRadius: 10,
-    alignItems: "center",
+    width: 300,
+    height: 200,
+  },
+  gptModalContent: {
+    backgroundColor: "#9CA3AF", // Clean white background
+    borderRadius: 16,
+    shadowColor: "#9CA3AF",
+    shadowOffset: { width: 0, height: 6 },
+    shadowOpacity: 0.05,
+    shadowRadius: 12,
+    elevation: 8,
+    padding: 20,
+    width: 300,
+    height: 200,
   },
   modalText: {
     fontSize: 18,

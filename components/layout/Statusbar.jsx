@@ -9,7 +9,7 @@ export const CustomStatusbar = () => {
     <View style={styles.statusBar}>
       <Text style={styles.statusBarText}>{time}</Text>
       <View style={styles.batteryFlex}>
-        <Text style={styles.statusBarText}>68%</Text>
+        <Text style={styles.statusBarText}>67%</Text>
         <BatteryMedium color="white" size={22} />
       </View>
     </View>
@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     gap: 10,
     backgroundColor: "black",
-    paddingInline: 4,
+    paddingInline: 15,
   },
   statusBarText: {
     color: "white",
