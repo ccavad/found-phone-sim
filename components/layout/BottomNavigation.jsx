@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { View, StyleSheet, TouchableOpacity, Modal, Text } from "react-native";
 import { ChevronLeft, Home, Settings } from "lucide-react-native";
 import { useNavigation } from "@react-navigation/native";
-import theme from "../../theme/theme";
+import { palette } from "../../theme/theme";
 
 const CustomBottomNavigation = () => {
   const navigation = useNavigation();
@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
     left: 0,
     right: 0,
     height: 60,
-    backgroundColor: theme.colors.darkOverlay, // Transparent background
+    backgroundColor: palette.darkOverlay, // Transparent background
     // borderTopWidth: 1,
     // borderTopColor: "#fff",
     zIndex: 1,
@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: theme.colors.darkOverlay,
+    backgroundColor: palette.darkOverlay,
   },
   modalContent: {
     backgroundColor: "#4A90E2", // Slightly lighter than pure black

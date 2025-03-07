@@ -7,7 +7,7 @@ import {
   StyleSheet,
 } from "react-native";
 import { createBox, createText } from "@shopify/restyle";
-import theme from "../theme/theme";
+import theme, { palette } from "../theme/theme";
 import {
   Images,
   MessageCircle,
@@ -25,7 +25,7 @@ const menuItems = [
   },
   {
     title: "Messages",
-    screen: "MessagesScreen",
+    screen: "MessageScreen",
     icon: <MessageCircle color={"white"} size={25} />,
     bgColor: "#4A90E2", // Bright blue
   },
@@ -127,7 +127,7 @@ const styles = StyleSheet.create({
     marginBottom: 30,
   },
   button: {
-    backgroundColor: theme.colors.background,
+    backgroundColor: palette.background,
     padding: theme.padding.s,
     borderRadius: theme.borderRadii.s,
     width: 100,

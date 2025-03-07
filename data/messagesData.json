@@ -1,0 +1,32 @@
+{
+  "2024-03-01": [
+    [
+      { "text": "Hey, did you find anything?", "sender": "me", "time": "09:15" },
+      { "text": "Not yet. The client was acting strange though.", "sender": "detective", "time": "09:17" }
+    ],
+    [
+      { "text": "Strange how?", "sender": "me", "time": "09:20" },
+      { "text": "He kept asking if I told anyone about the case.", "sender": "detective", "time": "09:22" }
+    ]
+  ],
+  "2024-03-02": [
+    [
+      { "text": "I checked the office. Your files are missing.", "sender": "lawyer", "time": "14:05" },
+      { "text": "That’s impossible. They were locked in the safe.", "sender": "me", "time": "14:07" }
+    ],
+    [
+      { "text": "Then someone had the code.", "sender": "lawyer", "time": "14:10" },
+      { "text": "Damn… that means it was an inside job.", "sender": "me", "time": "14:12" }
+    ]
+  ],
+  "2024-03-03": [
+    [
+      { "text": "Got a name for you. Elias Mercer.", "sender": "detective", "time": "21:30" },
+      { "text": "That’s the guy? Who hired you?", "sender": "me", "time": "21:31" }
+    ],
+    [
+      { "text": "Yes. But he disappeared last night.", "sender": "detective", "time": "21:35" },
+      { "text": "Something’s not right. Be careful.", "sender": "me", "time": "21:37" }
+    ]
+  ]
+}
