@@ -7,6 +7,7 @@ import SwipeToUnlock from "../screens/SwipeToUnlock";
 import { useGameStore } from "../store/gameStore";
 import { SideMenu } from "../components/layout/SideMenu";
 import { GalleryScreen } from "../screens/GalleryScreen";
+import MessageScreen from "../screens/MessageScreen";
 
 const Stack = createStackNavigator();
 
@@ -22,6 +23,7 @@ export const StackNavigation = () => {
       >
         <Stack.Screen name="MainScreen" component={MainScreen} />
         <Stack.Screen name="TestScreen" component={SwipeToUnlock} />
+        <Stack.Screen name="MessageScreen" component={MessageScreen} />
         <Stack.Screen
           name="GalleryScreen"
           component={GalleryScreen}
